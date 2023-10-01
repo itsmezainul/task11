@@ -1,0 +1,14 @@
+{
+  "contacts": [
+    {
+      "id": "b7ee49b2-0e89-4e9f-8d37-9903c9001adfasf",
+      "name": "persion 1",
+      "photo": "https://i.pravatar.cc/?u=b7ee49b2-0e89-4e9f-8d37-9903c9001adfasf",
+      "mobile": "9874641331",
+      "email": "abc@gmail.com",
+      "company": "abc",
+      "title": "abc",
+      "group": "Family"
+    }
+  ]
+}
