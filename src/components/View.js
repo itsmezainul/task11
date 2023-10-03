@@ -9,7 +9,9 @@ export default function View() {
   useEffect(() => {
     async function fetchSingleData() {
       setIsLoading(true);
-      const res = await fetch(`http://localhost:9000/contacts/${contactID}`);
+      const res = await fetch(
+        `https://json-server-dj5h.onrender.com/contacts/${contactID}`
+      );
       const data = await res.json();
       setSingleData(data);
       setIsLoading(false);

@@ -20,7 +20,9 @@ export default function Edit() {
   useEffect(() => {
     async function fetchSingleData() {
       setIsLoading(true);
-      const res = await fetch(`http://localhost:9000/contacts/${contactID}`);
+      const res = await fetch(
+        `https://json-server-dj5h.onrender.com/contacts/${contactID}`
+      );
       const data = await res.json();
       setName(data.name);
       setUrl(data.photo);
@@ -54,7 +56,7 @@ export default function Edit() {
       body: JSON.stringify({ ...newItem }),
     };
     await apiRequest(
-      `http://localhost:9000/contacts/${contactID}`,
+      `https://json-server-dj5h.onrender.com/contacts/${contactID}`,
       updateOption
     );
     setSaved(false);

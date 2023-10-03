@@ -35,7 +35,10 @@ export default function Add() {
       },
       body: JSON.stringify(newItem),
     };
-    await apiRequest("http://localhost:9000/contacts", postOptions);
+    await apiRequest(
+      "https://json-server-dj5h.onrender.com/contacts",
+      postOptions
+    );
     setName("");
     setUrl("");
     setMobile("");

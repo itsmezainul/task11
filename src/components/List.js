@@ -9,7 +9,7 @@ export default function List({ actions, setActions }) {
   useEffect(() => {
     async function fetchData() {
       setIsLoading(true);
-      const res = await fetch("http://localhost:9000/contacts");
+      const res = await fetch("https://json-server-dj5h.onrender.com/contacts");
       if (!res.ok) alert("some problem with api please reload");
       const data = await res.json();
       setDataList(data);
@@ -51,7 +51,10 @@ function ProfileCard({ data, setActions }) {
     const deleteOption = {
       method: "DELETE",
     };
-    apiRequest(`http://localhost:9000/contacts/${id}`, deleteOption);
+    apiRequest(
+      `https://json-server-dj5h.onrender.com/contacts/${id}`,
+      deleteOption
+    );
     setActions((pre) => !pre);
   }
   return (
